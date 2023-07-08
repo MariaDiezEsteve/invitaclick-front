@@ -1,0 +1,47 @@
+//IMPORTANDO ESTILOS DE SASS DE BOOTSTRAP
+//@import "bootstrap/scss/functions";
+//@import "bootstrap/scss/mixins";
+// @import "~bootstrap/scss/variables";
+//@import "bootstrap/scss/variables";
+//@import 'bootstrap/dist/js/bootstrap.js';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400&family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Lato:wght@300&family=Open+Sans:wght@500&display=swap');;
+
+$lato: 'Lato', sans-serif;
+$opensans: 'Open Sans', serif;
+$inter: 'Inter', serif;
+
+//VARIABLES
+$colour_one: #921734;
+$colour_two: #ae5871;
+$colour_three: #e5827d;
+$colour_four: #ffde9e;
+$colour_five: #ffe56c;
+
+$colour_six: #fffcee;
+
+
+$h1: 2.5rem;
+$h2: 1.9rem;
+$h3: 1.5rem;
+$h4: 1.2rem;
+$p: 1.15rem;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+  );
+
+
+//BREAKPOINTS
+
+// @include media-breakpoint-down(sm) {}
+// @include media-breakpoint-down(md) {}
+// @include media-breakpoint-down(lg) {}
+// @include media-breakpoint-down(xl) {} 
