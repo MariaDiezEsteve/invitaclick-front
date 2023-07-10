@@ -16,7 +16,7 @@
               <a class="nav-link" href="#">Como comprar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link" href="/contact">Contacto</a>
             </li>
           </ul>
         </div>
