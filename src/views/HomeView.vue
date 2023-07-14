@@ -12,6 +12,9 @@
   <div>
     <HowToGetIt />
   </div>
+  <div>
+    <FooterNav />
+  </div>
 </template>
 
 <script setup>
@@ -19,6 +22,7 @@ import Navbar from '@/components/Navbar/NavbarNav.vue'
 import Header from '@/components/Cards/HeaderCard.vue'
 import HowToGetIt from '@/components/Cards/HowtogetitCard.vue'
 import Including from '@/components/Cards/IncludingCard.vue'
+import FooterNav from '@/components/Navbar/FooterNav.vue'
 
 
 </script>
