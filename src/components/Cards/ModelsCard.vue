@@ -12,11 +12,33 @@
                 </div>
             </div>
         </div>
+        <div class="card">
+            <div class="phone">
+                <div class="screen">
+                    <img src="../../assets/Product/imagen1.png" alt="Imagen 1">
+                    <img src="../../assets/Product/imagen2.jpg" alt="Imagen 2">
+                    <img src="../../assets/Product/imagen3.jpg" alt="Imagen 3">
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="phone">
+                <div class="screen">
+                    <img src="../../assets/Product/imagen1.png" alt="Imagen 1">
+                    <img src="../../assets/Product/imagen2.jpg" alt="Imagen 2">
+                    <img src="../../assets/Product/imagen3.jpg" alt="Imagen 3">
+                </div>
+            </div>
+        </div>
     </section>
-    <div class="description" v-for="dat in data.data" :key="dat.id" >
-        <h2>{{ dat.name }}</h2>
-        <p>{{ dat.description }} </p>
-    </div>
+    <section class="hero-section">
+        <div class="card" v-for="dat in data.data" :key="dat.id" >
+            <h2>{{ dat.name }}</h2>
+            <p>{{ dat.description }} </p>
+        </div>
+    </section>
+    
+    
   </template>
   
   <script setup>
@@ -30,14 +52,23 @@
   
   <style lang="scss" scoped>
   @import "@/assets/Sass/--parcial.scss";
-.card {
-    margin: 0;
-    padding: 0;
+
+.hero-section{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 100%;
+    align-content: space-between;
+   
+}
+
+.card {
+    width: 50%;
     background-color: #f0f0f0;
+    padding: 2%;
+    height: 50%;
+    align-items: center;
+    margin:2%;
 }
 
 .phone {
