@@ -13,6 +13,13 @@
     <HowToGetIt />
   </div>
   <div>
+    <img v-if="data.isError" src="@/assets/images/error.jpeg" alt="error">
+        <img v-if="isLoading" src="@/assets/images/spin.gif" alt="loading">
+        <div v-if="!data.isError && !isLoading" >
+          <ModelsCard :data="data"/>
+        </div>
+  </div>
+  <div>
     <FooterNav />
   </div>
 </template>
@@ -22,8 +29,23 @@ import Navbar from '@/components/Navbar/NavbarNav.vue'
 import Header from '@/components/Cards/HeaderCard.vue'
 import HowToGetIt from '@/components/Cards/HowtogetitCard.vue'
 import Including from '@/components/Cards/IncludingCard.vue'
+import ModelsCard from '@/components/Cards/ModelsCard.vue'
 import FooterNav from '@/components/Navbar/FooterNav.vue'
 
+import info from '@/dataInfo/productsGetData'
+import {ref, onMounted} from "vue";
+
+let isLoading = ref(true) 
+
+let data = ref(onMounted(async () => {
+  data.value = await info.getData()
+  
+  if( !data.value.isLoading){
+    isLoading.value = false
+  }
+})) 
+
+console.log(data.value);
 
 </script>
 
