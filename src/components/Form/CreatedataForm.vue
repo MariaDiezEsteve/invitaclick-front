@@ -62,7 +62,7 @@ const handleFiles = (event) => {
         };
 
         jsonData.value = JSON.stringify(dataToSave); 
-        console.log(jsonData);
+        console.log("imagenes guardadas", jsonData);
       }
     };
     reader.readAsDataURL(file);
@@ -74,7 +74,7 @@ const submitData = async () => {
   const files = fileInput.value.files;
 
   try {
-    axios.post("http://127.0.0.1:5000/sheets/create", {
+   await axios.post("http://127.0.0.1:5000/sheets/create", {
       name_one: formData.name_one,
       lastname_one: formData.lastname_one,
       name_two: formData.name_two,
