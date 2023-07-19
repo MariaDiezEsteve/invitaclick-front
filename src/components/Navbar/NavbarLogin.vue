@@ -10,10 +10,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Diseños</a>
+              <a class="nav-link" href="/#title-design-models">Diseños</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Como comprar</a>
+              <a class="nav-link" href="/#title-how-to-get-it">Como comprar</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contact">Contacto</a>
@@ -61,23 +61,59 @@
     
     // $colour_six: #fffcee
     
-    .branding{
-            display: flex;
-            align-items: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            height: fit-content;
-            img {
-              width: 90px; 
-              height: 40px;
-              object-fit: fill;
-            }
-            svg{fill:$colour_one}
+ .branding{
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        height: fit-content;
+        img {
+          width: 90px; 
+          height: 40px;
+          object-fit: fill;
         }
+        svg{fill:$colour_one}
+    }
     .photo{
         margin-right: 130px;
     }
     .dropdown-toggle::after {
     content: none;
   }
+  .nav-link{
+    margin-right: 2rem;
+    // border: 2px solid $colour_one;
+    font-family: $lato;
+    font-weight: 600;
+    border-radius: 5px;
+    color: $colour_one;
+    -webkit-transition-duration: 0.3s; 
+    transition-duration: 0.3s;    
+  }
+
+  .nav-link:hover{
+    color: $colour_six;
+    background-color: $colour_one;
+  }
+  .navbar-collapse {
+    flex-grow: 0;
+    align-items: center;
+  }
+
+  @media (max-width: 767px) {
+    .nav-link{
+      width: 20%;
+    }
+    
+    .nav-link:hover{
+    color: $colour_six;
+    background-color: $colour_one;
+    width: 20%;
+  }
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: lightgreen;
+}
+
 
     </style>

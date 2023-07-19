@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Modelos para elegir</h1>
+        <h2 id="title-design-models">Modelos para elegir</h2>
     </div>
     <section class="hero-section">
         <div class="card">

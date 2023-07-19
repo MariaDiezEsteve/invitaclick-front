@@ -10,10 +10,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Diseños</a>
+          <a class="nav-link" href="/#title-design-models">Diseños</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Como comprar</a>
+          <a class="nav-link" href="/#title-how-to-get-it">Como comprar</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contacto</a>

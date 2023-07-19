@@ -1,6 +1,6 @@
 <template>
     <div>
-        <NavLogin  />
+        <Navbar />
     </div>
     <div>
         <LoginView />
@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import NavLogin from '../components/Navbar/NavbarLogin.vue'
+import Navbar from '@/components/Navbar/NavbarNav.vue'
 import LoginView from '../components/Form/LoginForm.vue'
 import FooterNav from '@/components/Navbar/FooterNav.vue'
 

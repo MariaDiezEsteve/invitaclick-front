@@ -1,4 +1,7 @@
 <template>
+  <div>
+        <h2 id="title-how-to-get-it">Como comprar</h2>
+    </div>
     <section class="hero-section">
         <div class="card-grid">
             <a class="card" href="#">

@@ -8,22 +8,19 @@
           <div class="eula">Si tienes alguna idea para mejorar nuestro sitio web o nuestros servicios, no dudes en compartirla con nosotros. Estamos constantemente buscando formas de crecer y brindar una mejor experiencia a nuestros usuarios.</div>
         </div>
         <div class="right">
-          <div class="form">
+          <form @submit.prevent>
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" /> 
+            <input type="text" id="nombre" v-model="formData.name" /> 
             <!-- v-model="" -->
             <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" />
+            <input type="tel" id="telefono" v-model="formData.phone" />
             <!-- v-model="" -->
             <label for="email">Email</label>
-            <input type="email" id="email" />
-            <!-- v-model="" -->
+            <input type="email" id="email" v-model="formData.email" />
             <label for="comentario">Pregúntanos</label>
-            <textarea rows="4" cols="70" name="textarea" placeholder="Escribe aquí..." maxlength="1000"></textarea>
-
-            <!-- v-model="" -->
-            <input type="submit" id="submit" value="Enviar" />
-          </div>
+            <textarea rows="4" cols="70" name="textarea" placeholder="Escribe aquí..." maxlength="1000" v-model="formData.question"></textarea>
+            <input type="submit" id="submit" @click="submitDataContact" value="Enviar" />
+          </form>
         </div>
       </div>
     </div>
@@ -37,6 +34,40 @@
 //   onMounted(() => {
 //    ;
 //   });
+
+import axios from 'axios';
+import { reactive} from 'vue';
+
+const formData = reactive({
+  "name": "",
+  "email": "",
+  "phone": "",
+  "question": ""
+});
+
+
+const submitDataContact = async () => {
+  console.log("esto es nombre", formData.name)
+  console.log("esto es email", formData.email)
+  console.log("esto es phone", formData.phone)
+  console.log("esto es question", formData.question)
+  let isError = false;
+  try {
+   await axios.post("http://127.0.0.1:5000/contact/create", {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      question: formData.question,
+    });
+    
+    location.reload();
+  } catch (error) {
+    isError = true;
+    console.error(error);
+  }
+
+  return isError;
+};
   
   </script>
   
@@ -132,7 +163,7 @@
     width: 150%;
   }
 }
-.form {
+form {
     position: absolute;
     top: 48%;
     left: 50%;
