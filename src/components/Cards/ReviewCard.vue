@@ -1,7 +1,7 @@
 <template>
     <section id="testimonials">
         <div class="testimonila-heading">
-            <h1>Lo que los clientes dicen</h1>
+            <h2 class="title-review">Lo que los clientes dicen</h2>
         </div>
         <div class="testimonial-box-container">
             <div class="testimonial-box" v-for="dat in dataReviews.data" :key="dat.id">
@@ -32,6 +32,18 @@ defineProps({
 <style lang="scss" scoped>
 @import "@/assets/Sass/--parcial.scss";
 
+.title-review{
+  text-align: center;
+}
+h2{
+    font-size: 50px;
+    font-weight: bold;
+    color: $colour_one;
+}
+
+p{
+    font-size: 0.7rem;
+}
 #testimonials{
     display: flex;
     justify-content: center;
@@ -58,22 +70,23 @@ defineProps({
 }
 
 .testimonial-box-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
 }
 
 .testimonial-box{
-    width: 500px;
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+    width: 323px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
     padding: 20px;
     margin: 15px;
     cursor: pointer;
-    height: 292px; 
+    height: 250px;
     overflow: hidden; 
+    border-radius: 5px;
 }
 
 .box-top{
@@ -82,13 +95,9 @@ defineProps({
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    width: 100%; 
-    height: 100%; 
     overflow-y: auto; 
     padding: 10px; 
 }
-
-
 
 .client-comment p{
   font-size: 0.9rem;

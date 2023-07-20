@@ -5,7 +5,6 @@
   <div>
     <Header />
   </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffe56c" fill-opacity="1" d="M0,128L80,122.7C160,117,320,107,480,117.3C640,128,800,160,960,160C1120,160,1280,128,1360,112L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
   <div>
     <Including />
   </div>
@@ -13,11 +12,7 @@
     <HowToGetIt />
   </div>
   <div>
-    <img v-if="data.isError" src="@/assets/images/error.jpeg" alt="error">
-        <img v-if="isLoading" src="@/assets/images/spin.gif" alt="loading">
-        <div v-if="!data.isError && !isLoading" >
-          <ModelsCard :data="data"/>
-        </div>
+    <ModelsCard />
   </div>
   <div>
     <img v-if="dataReviews.isError" src="@/assets/images/error.jpeg" alt="error">
@@ -40,20 +35,10 @@ import ModelsCard from '@/components/Cards/ModelsCard.vue'
 import ReviewCard from '@/components/Cards/ReviewCard.vue'
 import FooterNav from '@/components/Navbar/FooterNav.vue'
 
-import info from '@/dataInfo/productsGetData'
 import reviews from '@/dataInfo/reviewsGetData'
 import {ref, onMounted} from "vue";
 
 let isLoading = ref(true) 
-
-
-let data = ref(onMounted(async () => {
-  data.value = await info.getData()
-  
-  if( !data.value.isLoading){
-    isLoading.value = false
-  }
-})) 
 
 let dataReviews = ref(onMounted(async () => {
   dataReviews.value = await reviews.getDataReviews()
@@ -82,11 +67,6 @@ console.log(dataReviews.value);
 // $colour_five: #ffe56c
 
 // $colour_six: #fffcee
-
-svg{
-  width:100%;
-  height: 100%;
-}
 
 </style>
 

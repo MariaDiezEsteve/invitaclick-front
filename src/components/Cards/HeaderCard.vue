@@ -1,7 +1,7 @@
 <template>
   <div class="section">
       <div class="left-div">
-            <h1>La magia de tu boda en un clic <br> Invitaciones digitales que celebran tu amor</h1>
+            <h1>La magia de tu boda en un clic  <br> <span>Invitaciones digitales que celebran tu amor</span></h1>
       </div>
       <div class="right-div">
          <li type="button" class="button">Diseños
@@ -31,16 +31,19 @@
 
 // $colour_six: #fffcee
 
+h1 span{
+   font-size: 1.1rem;
+}
 .section {
-    background-image: url('../../assets/Header/invitación_6.avif');
-    background-size: cover;
+    background-image: url('../../assets/Header/imagen.png');
+    background-size:contain;
     background-position: center;
     width: 100%;
-    height: 32rem; 
+    height: 20rem; 
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     align-items: center;
 
   }
@@ -49,17 +52,15 @@
     h1 {
     font-family: $inter;
     color: $colour_six; 
-    font-size: 3rem; 
+    font-size: 2rem; 
   }
   }
   
   .right-div {
-    width: 50%;
-    text-align: center;
-    display: flex;
+   text-align: center;
+   display: flex;
    justify-content: center;
    align-items: center;
-   margin-top: 2.5rem;
 
     li {
       --c:  white;
@@ -67,8 +68,7 @@
       font-size: 24px;
       border: 0.3em solid var(--c);
       border-radius: 0.5em;
-      width: 12em;
-      height: 3em;
+      width: 9em;
       font-weight: bold;
       font-family: $lato;
       text-align: center;

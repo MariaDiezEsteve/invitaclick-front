@@ -82,6 +82,7 @@
     .dropdown-toggle::after {
     content: none;
   }
+ 
   .nav-link{
     margin-right: 2rem;
     // border: 2px solid $colour_one;
@@ -90,7 +91,8 @@
     border-radius: 5px;
     color: $colour_one;
     -webkit-transition-duration: 0.3s; 
-    transition-duration: 0.3s;    
+    transition-duration: 0.3s;  
+    font-size: 1.3rem;  
   }
 
   .nav-link:hover{

@@ -80,32 +80,39 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -205%);
-    font-size: 76px;
+    transform: translate(-50%, -168%);
+    font-size: 65px;
     font-weight: bold;
     color: $colour_one;
 }
+
+h2{
+    font-size: 1.2rem;
+}
+p{
+    font-size: 0.9rem;
+    padding:0 1rem;
+}
 .container_wrapper{
     margin: 1.2rem;
+    margin-top: 10em;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
 .wrapper{
-    padding: 1rem;
+    padding-top: 1rem;
 }
 .text {
     display: flex;
     flex-direction: column;
     margin-right: 2rem;
-    padding: 0.2rem;
     color: $colour_one;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 12px;
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
-    
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);   
 }
 
 
