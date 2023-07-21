@@ -1,18 +1,16 @@
 <template>
-   <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container my-5">
   <!-- Footer -->
-  <footer class="text-center text-white" style="background-color: #3f51b5">
+  <footer class="text-center text-white" style="overflow-y: hidden;">
     <!-- Grid container -->
     <div class="container">
       <!-- Section: Links -->
-      <section class="mt-5">
+      <section>
         <!-- Grid row-->
         <div class="row text-center d-flex justify-content-center pt-5">
           <!-- Grid column -->
           <div class="col-md-2">
             <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-white">Contacto</a>
+              <a href="/contact" class="text-white">Contacto</a>
             </h6>
           </div>
           <!-- Grid column -->
@@ -20,7 +18,7 @@
           <!-- Grid column -->
           <div class="col-md-2">
             <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-white">Sobre mi</a>
+              <a href="/about" class="text-white">Sobre mi</a>
             </h6>
           </div>
           <!-- Grid column -->
@@ -28,7 +26,7 @@
           <!-- Grid column -->
           <div class="col-md-2">
             <h6 class="text-uppercase font-weight-bold">
-              <a href="#!" class="text-white">Login</a>
+              <a href="/login" class="text-white">Login</a>
             </h6>
           </div>
           <!-- Grid column -->
@@ -37,12 +35,12 @@
       </section>
       <!-- Section: Links -->
 
-      <hr class="my-5" />
+      <hr class="my-3" />
 
       <!-- Section: Text -->
-      <section class="mb-5">
+      <section class="mb-3">
         <div class="row d-flex justify-content-center">
-          <div class="col-lg-8">
+          <div >
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
               distinctio earum repellat quaerat voluptatibus placeat nam,
@@ -54,28 +52,6 @@
       </section>
       <!-- Section: Text -->
 
-      <!-- Section: Social -->
-      <section class="text-center mb-5">
-        <a href="" class="text-white me-4">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="text-white me-4">
-          <i class="fab fa-github"></i>
-        </a>
-      </section>
-      <!-- Section: Social -->
     </div>
     <!-- Grid container -->
 
@@ -84,14 +60,12 @@
          class="text-center"
          style="background-color: rgba(0, 0, 0, 0.2)"
          >
-      © 2023 Copyright:
-      <p class="text-white">María Diez Esteve</p>
+      <p class="text-white p-2">© 2023 Copyright: María Diez Esteve</p>
     </div>
     <!-- Copyright -->
   </footer>
   <!-- Footer -->
-</div>
-<!-- End of .container -->
+
   </template>
   
   <script setup>
@@ -100,4 +74,28 @@
   
   <style lang="scss" scoped>
   @import "@/assets/Sass/--parcial.scss";
+
+    // $lato: 'Lato', sans-serif
+    // $opensans: 'Open Sans', serif
+    // $inter: 'Inter', serif
+    
+    // //VARIABLES
+    // $colour_one: #921734
+    // $colour_two: #ae5871
+    // $colour_three: #e5827d
+    // $colour_four: #ffde9e
+    // $colour_five: #ffe56c
+    
+    // $colour_six: #fffcee
+
+
+  .text-center{
+    background-color: $colour_one;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+
   </style>

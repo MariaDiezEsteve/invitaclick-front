@@ -62,11 +62,11 @@ h1 span{
    justify-content: center;
    align-items: center;
 
-    li {
+   li {
       --c:  white;
       color: var(--c);
       font-size: 24px;
-      border: 0.3em solid var(--c);
+      border: 0.1em solid var(--c);
       border-radius: 0.5em;
       width: 9em;
       font-weight: bold;
@@ -95,6 +95,7 @@ h1 span{
 
    li:hover {
       color: $colour_six;
+      border: none;
    }
    li:hover span {
       transform: translateY(0) scale(2);

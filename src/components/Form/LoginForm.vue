@@ -1,17 +1,17 @@
 <template>
      <div class="wrapper">
         <div class="form-wrapper sign-in">
-            <form action="/login" method="post">
+            <form @submit.prevent>
                 <h2>Accede a tu perfil</h2>
                 <div class="input-group">
-                    <input type="email" required name="Email">
+                    <input type="email" required name="email" v-model="email">
                     <label for="">Correo</label>
                 </div>
                 <div class="input-group">
-                    <input type="password" required name="Password">
+                    <input type="password" required name="password" v-model="password">
                     <label for="">Contraseña</label>
                 </div>
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn" @click="sessionStart">Login</button>
                 <div class="sign-link">
                     <a>Todavía no tienes cuenta, selecciona un diseño y dejanos tus datos. </a>
                 </div>
@@ -22,6 +22,50 @@
   </template>
   
 <script setup>
+import { ref } from 'vue';
+import axios from 'axios';  
+import { useRouter } from 'vue-router';
+
+const $router = useRouter();
+
+
+
+// Log In
+const user_email = ref('');
+const user_password =ref('');
+
+
+const sessionStart= async () => { 
+      
+    try {
+      const response = await axios.post('http://127.0.0.1:5000/login', {
+        email: user_email.value,
+        password: user_password.value,
+      });
+  
+      const data = response.data;
+      console.log("esto es data de loguin", data)
+  
+      if (data === data) {
+        // Inicio de sesión exitoso
+        const id_user = data; 
+        console.log('ID del usuario:', id_user);
+        const id = id_user['Login successful'] 
+        console.log('Inicio de sesión exitoso');
+        $router.push({ path:`/user/${id}`, params: { id } })
+
+      } else if (data === 'Login failed') {
+        // Credenciales inválidas
+        console.log('Credenciales inválidas. Inténtalo de nuevo.');
+      } else if (data === 'User not found') {
+        // Usuario no encontrado
+        alert("Usuario no encontrado o contraseña no correcta")
+        console.log('Usuario no encontrado.');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+};
    
 </script>
   

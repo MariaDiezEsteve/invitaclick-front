@@ -87,10 +87,10 @@
 }
 
 h2{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 p{
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     padding:0 1rem;
 }
 .container_wrapper{

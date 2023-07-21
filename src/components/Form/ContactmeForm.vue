@@ -91,6 +91,9 @@ const submitDataContact = async () => {
 .page {
   display: flex;
   flex-direction: column;
+
+  margin-bottom: 125px;
+  padding-bottom: 20px;
 }
 @media (max-width: 767px) {
 .page {

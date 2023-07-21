@@ -9,6 +9,7 @@
                   <img src="../../assets/HowGetIt/svg/fase1.svg" alt="how-to-get-it">
                 </div>
                 <div class="card__content">
+                    <span>1</span>
                     <p class="card__category">Elige tu modelo y clica en el carrito</p>
                 </div>
             </div>
@@ -17,6 +18,7 @@
                   <img src="../../assets/HowGetIt/svg/fase2.svg" alt="how-to-get-it">
                 </div>
                 <div class="card__content">
+                    <span>2</span>
                     <p class="card__category">Rellena los datos</p>
                 </div>
               </div>
@@ -25,6 +27,7 @@
                   <img src="../../assets/HowGetIt/svg/fase3.svg" alt="how-to-get-it">
                 </div>
                 <div class="card__content">
+                  <span>3</span>
                     <p class="card__category">Recibirás un email con un usuario y contraseña</p>
                 </div>
               </div>
@@ -33,6 +36,7 @@
                   <img src="../../assets/HowGetIt/svg/fase4.svg" alt="how-to-get-it">
                 </div>
                 <div class="card__content">
+                  <span>4</span>
                     <p class="card__category">Loguearte para poder rellenar todos los datos</p>
                 </div>
               </div>
@@ -41,6 +45,7 @@
                   <img src="../../assets/HowGetIt/svg/fase6.svg" alt="how-to-get-it">
                 </div>
                 <div class="card__content">
+                    <span>5</span>  
                     <p class="card__category">Abonar el importe</p>
                 </div>
               </div>
@@ -49,6 +54,7 @@
                   <img src="../../assets/HowGetIt/svg/fase7.svg" alt="how-to-get-it">
                 </div>
                 <div class="card__content">
+                    <span>6</span>
                     <p class="card__category">Recibe la invitación</p>
                 </div>
               </div>   
@@ -74,17 +80,7 @@
 // $colour_five: #ffe56c
 
 // $colour_six: #fffcee
-:root{
-  --background-dark: #2d3548;
-  --text-light: rgba(255,255,255,0.6);
-  --text-lighter: rgba(255,255,255,0.9);
-  --spacing-s: 8px;
-  --spacing-m: 16px;
-  --spacing-l: 24px;
-  --spacing-xl: 32px;
-  --spacing-xxl: 64px;
-  --width-container: 1200px;
-}
+
 
 #title-how-to-get-it{
   margin: rem 0;
@@ -166,6 +162,7 @@ h2{
   position: absolute;
   top: 0;
   text-align: center;
+  width: 100%;
 }
 
 .card__category{
@@ -174,6 +171,22 @@ h2{
   font-family: $lato;
   font-weight: 700;
   text-align: center;
+  padding-bottom: 1.2rem;
+}
+p{
+  text-align: center;
+  padding-bottom: 1.2rem;
+}
+span{
+  color: $colour_one;
+  font-size: 2rem;
+  font-family: $inter;
+  font-weight: 900;
+  text-align: center;
+  
+}
+img{
+  margin-top: 2rem;
 }
 
 @media(max-width: 1650px){
